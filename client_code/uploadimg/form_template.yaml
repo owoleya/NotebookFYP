@@ -1,0 +1,46 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Text Label,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_1
+  layout_properties: {grid_position: 'UIKZLX,BWADYB'}
+  data_bindings:
+  - {property: text, code: 'self.item[''imglabel'']', writeback: true}
+- type: Image
+  properties: {}
+  name: image_1
+  layout_properties: {grid_position: 'XPMIUQ,SIYGAM'}
+- type: FileLoader
+  properties:
+    role: filled-button
+    show_state: true
+    align: center
+    tooltip: ''
+    border: ''
+    file_types: null
+    enabled: true
+    files: []
+    foreground: ''
+    visible: true
+    text: Upload
+    font_size: null
+    font: ''
+    spacing_above: small
+    icon_align: left
+    spacing_below: small
+    italic: false
+    file: null
+    background: ''
+    bold: false
+    underline: false
+    multiple: false
+    icon: fa:upload
+  name: file_loader_1
+  layout_properties: {grid_position: 'KOPMDP,RZQDTA'}
+  event_bindings: {change: file_loader_1_change}
+is_package: true

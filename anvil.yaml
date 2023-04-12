@@ -1,0 +1,45 @@
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: main}
+package_name: NoteApp
+allow_embedding: false
+name: FYP NoteApp
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {logo_img: 'asset:Asset 3.png'}
+startup_form: null
+db_schema:
+  notes:
+    title: notes
+    client: full
+    server: full
+    columns:
+    - name: label
+      admin_ui: {width: 200}
+      type: string
+    - name: content
+      admin_ui: {width: 200}
+      type: string
+    - name: created_date
+      admin_ui: {order: 3, width: 200}
+      type: datetime
+    - name: imgs
+      admin_ui: {order: 3, width: 200}
+      type: link_multiple
+      target: notedata
+  notedata:
+    title: notedata
+    client: full
+    server: full
+    columns:
+    - name: imglabel
+      admin_ui: {width: 200}
+      type: string
+    - name: imgcontent
+      admin_ui: {width: 200}
+      type: media
+uplink_visible: true
+renamed: true

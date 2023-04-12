@@ -1,0 +1,26 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"YPZEQJ":10,"SUFDLN":50}'}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+      Surface', visible: true, text: 'Note name : ', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'VAJFAB,YPZEQJ'}
+- type: TextBox
+  properties: {}
+  name: createbox
+  layout_properties: {grid_position: 'VAJFAB,SUFDLN'}
+  event_bindings: {pressed_enter: createbox_pressed_enter}
+  data_bindings:
+  - {property: text, code: 'self.item[''label'']', writeback: true}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:Error',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: error
+  layout_properties: {grid_position: 'ULSZVK,ULZECD'}
+is_package: true

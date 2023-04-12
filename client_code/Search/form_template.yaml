@@ -1,0 +1,29 @@
+container: {type: ColumnPanel}
+components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: column_panel_2
+  layout_properties:
+    col_widths: {}
+    grid_position: MAVLKO,CIBKHB
+  components:
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Search,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: Roboto, spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: text_box_1
+    layout_properties: {grid_position: 'DWTDCF,WURTCX'}
+    event_bindings: {pressed_enter: text_box_1_pressed_enter}
+  - type: Label
+    properties: {}
+    name: result
+    layout_properties: {grid_position: 'FGINNQ,DZTQVN'}
+  - type: RepeatingPanel
+    properties: {item_template: Search.SearchResultWindow}
+    name: repeating_panel_2
+    layout_properties: {grid_position: 'FVTSRW,ZCXMLK'}
+is_package: true
+custom_component: false

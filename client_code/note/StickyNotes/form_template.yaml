@@ -1,0 +1,28 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"FEZVKT":45,"LLWSIK":15}'}
+components:
+- type: Image
+  properties: {}
+  name: image_1
+  layout_properties: {grid_position: 'UVWCVY,FEZVKT'}
+  data_bindings:
+  - {property: source, code: 'self.item[''imgcontent'']'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: '', font_size: 20, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'UVWCVY,LLWSIK HCSHDB,WMNCNT'}
+  data_bindings:
+  - {property: text, code: 'self.item[''imglabel'']'}
+- type: Button
+  properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Delete, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Error',
+    bold: false, underline: false, icon: ''}
+  name: button_1
+  layout_properties: {grid_position: 'UVWCVY,LLWSIK EYZUOV,RSWTBX'}
+  event_bindings: {click: button_1_click}
+is_package: true

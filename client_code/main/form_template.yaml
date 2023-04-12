@@ -1,0 +1,65 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components: []
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Notes Center, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: 'fa:home'}
+    name: home
+    layout_properties: {grid_position: 'XIFLLW,WTGDOR'}
+    event_bindings: {click: home_click}
+  - type: Button
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Add Note, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: 'fa:plus'}
+    name: addnote
+    layout_properties: {grid_position: 'AICUHU,XZEBVE'}
+    event_bindings: {click: addnote_click}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: 'theme:On
+        Surface', visible: true, text: Recent Notes, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'ZHKTIW,PCZUNN'}
+  - type: RepeatingPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
+      visible: true, spacing_above: small, spacing_below: small, item_template: main.Recents,
+      background: ''}
+    name: repeating_panel_1
+    layout_properties: {grid_position: 'BSPIRS,WXKBXJ', full_width_row: false}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Search note,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: searchbox
+    layout_properties: {grid_position: 'MYWSAC,FTYNGH'}
+    event_bindings: {pressed_enter: searchbox_pressed_enter}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_2
+    layout_properties: {grid_position: 'VOKSQT,AWRFCQ'}
+    components:
+    - type: RepeatingPanel
+      properties: {item_template: main.SearchResults}
+      name: repeating_panel_2
+      layout_properties: {grid_position: 'AFPAJK,YDQNBI'}
+- type: ColumnPanel
+  properties: {}
+  name: content
+  layout_properties: {slot: default}

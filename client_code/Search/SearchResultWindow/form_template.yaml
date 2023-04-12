@@ -1,0 +1,23 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: never, col_spacing: medium, spacing_above: small, col_widths: '{"RKGTCI":40,"AIORYD":20}',
+    spacing_below: small, background: ''}
+components:
+- type: Button
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    visible: true, text: button_1, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: notename
+  layout_properties: {grid_position: 'SOBFHW,RKGTCI'}
+  data_bindings:
+  - {property: text, code: 'self.item[''label'']'}
+  event_bindings: {click: notename_click}
+- type: Label
+  properties: {}
+  name: createtime
+  layout_properties: {grid_position: 'SOBFHW,AIORYD'}
+  data_bindings:
+  - {property: text, code: 'self.item[''created_date'']'}
+is_package: true
